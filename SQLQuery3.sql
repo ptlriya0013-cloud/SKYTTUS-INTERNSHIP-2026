@@ -8,9 +8,10 @@ create table employees(
 insert into employees(emp_id,emp_name, dept_id, salary) values
 (1, 'Riya' , 11, 60000),
 (2, 'Cheriti' , 12, 45000),
-(3, 'Srushti', 12, 35000),
+(3, 'Amit', 12, 35000),
 (4, 'Tirth', NULL , 35000),
-(5, 'Jigar', 12, 30000);
+(5, 'Jigar', 12, 30000),
+(6, 'Amit', 13 , 40000);
 
 --select * from employees ;
 
@@ -26,7 +27,7 @@ insert into departments values
 
 --select * from departments ;
 
-
+--drop table departments;
 
 --Display employees name with department name
 SELECT e.emp_name, d.dept_name
