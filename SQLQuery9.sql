@@ -96,3 +96,11 @@ INSERT INTO logs VALUES
 (7, 400);
 
 SELECT * FROM logs;
+
+SELECT DISTINCT value
+FROM (
+    SELECT value,
+           LAG(value) OVER (ORDER BY id) AS prev_value
+    FROM logs
+) t
+WHERE value = prev_value;
